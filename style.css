@@ -1,42 +1,54 @@
-header{
-    margin-top: 100px;
+.container {
+	background-clip: #DDDDDD;
+	padding: 4px;
+	display: grid;
+	grid-template-areas: 		
+		'header header header header header header'
+		'main-menu main-menu main-menu main-menu aside-menu aside-menu'
+		'footer footer footer footer aside-menu aside-menu' ;
+	grid-template-columns: 350px 220px 250px;
+	grid-template-rows: 60px 520px 60px;
+	grid-gap: 2px;
 }
-body{
-    background-color: pink;
+.container div {
+	padding-top: 20px;
+	padding-bottom: 20px;
 }
-.menu{
-    margin: 0;
-    padding: 0;
+.header {
+	height: 50px;
+	grid-area: header;
+	background-color: lightgray;
 }
-.menu li{
-    list-style: none;
-    padding: 15px 30px 15px 40px;
+.main-menu {
+	height: 500px;
+	grid-area: main-menu;
+	background-color: #251002;
 }
-.menu  ul{
-    display: flex;
-    justify-content: center;
+.aside-menu {
+	height: 560px;
+	grid-area: aside-menu;
+	background-color: #08D8ED;
+	z-index: 2;
+	grid-template-columns: repeat(2, 1fr);
 }
-ul{
-    display: block;
-    font-size: 20px;
+.sub-high {
+	height: 20px;
+	width: 250px;
+	z-index: 1;
+	grid-column-start: 1;
+	grid-area: sub-high;
+	background-color: orange;
 }
-.menu li a:hover{
-    background-color: black;
-    color: white;
+.sub-low {
+	height: 20px;
+	width: 250px;
+	grid-row: 1;
+	z-index: 1;
+	grid-area: sub-low;
+	background-color: pink;
 }
-
-.menu li ul{
-    display: none;
-    position: absolute;
-}
-
-.menu li:hover ul{
-    display: block;
-}
-.menu li ul li:hover{
-    background-color: black;
-    color: white;
-}
-.menu li{
-    padding: 15px 30px 15px 40px;
+.footer {
+	height: 36px;
+	grid-area: footer;
+	background-color: #98FF98;
 }
