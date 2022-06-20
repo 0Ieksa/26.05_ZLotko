@@ -1,0 +1,42 @@
+header{
+    margin-top: 100px;
+}
+body{
+    background-color: pink;
+}
+.menu{
+    margin: 0;
+    padding: 0;
+}
+.menu li{
+    list-style: none;
+    padding: 15px 30px 15px 40px;
+}
+.menu  ul{
+    display: flex;
+    justify-content: center;
+}
+ul{
+    display: block;
+    font-size: 20px;
+}
+.menu li a:hover{
+    background-color: black;
+    color: white;
+}
+
+.menu li ul{
+    display: none;
+    position: absolute;
+}
+
+.menu li:hover ul{
+    display: block;
+}
+.menu li ul li:hover{
+    background-color: black;
+    color: white;
+}
+.menu li{
+    padding: 15px 30px 15px 40px;
+}
